@@ -29,7 +29,6 @@ def execute_event():
         hwp.HAction.GetDefault("RepeatFind", hwp.HParameterSet.HFindReplace.HSet);
         temp=picture.rsplit("/",maxsplit=1)[1]
         temp=temp.rsplit(".",maxsplit=1)[0]
-        temp=temp.replace('[꾸미기]', '')
         hwp.HParameterSet.HFindReplace.FindString = "NO."+temp
         print('No.'+temp)
         hwp.HParameterSet.HFindReplace.IgnoreMessage = 1
@@ -54,19 +53,3 @@ btn3 = Button(root, text='실행', command=execute_event)
 btn3.grid(row=0, column=2, ipadx=10,ipady=10, padx=20, pady=20)
 
 root.mainloop()
-
-##
-##for i in imagelist:
-##    j=i.rsplit("/",maxsplit=1)[1]
-##    print(j)
-##    j=j.rsplit(".",maxsplit=1)[0]
-##    print(j)
-##    j=j.replace('[꾸미기]', '')
-##    print(j)
-##    
-##
-##root.destroy()
-##
-
-## BASE_DIR = imagelist[0].rsplit("/", maxsplit=1)[0]
-## imagelist=[i.rsplit("/",maxsplit=1)[1] for i in imagelist]
